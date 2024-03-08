@@ -1,9 +1,14 @@
+<template>
+  <div>
+
+  </div>
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import {ref, onMounted} from 'vue'
+const tree = ref
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style lang="scss" scoped>
+
+</style>
