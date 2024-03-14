@@ -1,4 +1,5 @@
 <template>
+  .container
   <div>
 
   </div>
@@ -6,6 +7,7 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
+import ChartGraphCards from './ChartGraphCards.vue';
 const tree = ref('')
 async function getTree() {
   let res = await fetch('https://data.cityofnewyork.us/resource/ju3b-rwpy.json')
