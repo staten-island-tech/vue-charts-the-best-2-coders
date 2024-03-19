@@ -3,7 +3,7 @@
     <ChartGraphCard v-for="(pee, index + 1) in tree" 
     :key="pee.name"
     :id="index + 1" 
-    :tree="pee"/> 
+    :tree="pee"/>  
     </div>
   <div>
 
