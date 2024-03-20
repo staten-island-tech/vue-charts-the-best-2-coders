@@ -1,13 +1,9 @@
 <template>
   <div class="container">
-    <ChartGraphCard v-for="(pee, index + 1) in tree" 
-    :key="pee.name"
-    :id="index + 1" 
-    :tree="pee"/>  
+    <ChartGraphCard v-if="loaded" :data="data" />
+    
     </div>
-  <div>
-
-  </div>
+  
 </template>
 
 <script setup>
