@@ -6,7 +6,11 @@
 </template>
 
 <script setup>
-const props = 
+const props = {
+    
+}
+
+
 </script>
 
 <style lang="scss" scoped>
