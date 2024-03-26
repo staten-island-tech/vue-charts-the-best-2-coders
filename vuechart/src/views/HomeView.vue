@@ -20,7 +20,7 @@ async function getTree() {
   tree.value = data.results
 }
 onMounted(() => {
-  getTree()
+  getTree( )
 })
 </script>
 
