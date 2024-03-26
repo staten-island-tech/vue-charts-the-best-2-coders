@@ -16,7 +16,7 @@ import App from './HomeView.vue';
 
 // function onBeforeMount(callback: () => void): void
 
-async function mounted() {
+async function mounted() { 
   try {
     let response = await fetch(URL)
     data = await response.json()
