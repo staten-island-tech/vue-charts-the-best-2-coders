@@ -28,6 +28,7 @@ width: 80%rem;
   margin-left: 2rem;
   color: black;
   font-weight: bold;
+  text-decoration: underline;
 }
 h4 {
   font-size: 2rem;
