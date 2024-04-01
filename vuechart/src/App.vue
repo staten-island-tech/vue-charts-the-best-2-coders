@@ -24,6 +24,7 @@ font-size: 4rem;
   font-size: 2.5rem;
   margin: auto;
   margin-left: 2rem;
+  color: black;
 }
 
 </style>

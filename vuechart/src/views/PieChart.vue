@@ -1,5 +1,7 @@
 <template>
+  <header>
     <h1 class="crime">Crimes Reported in Different Boroughs</h1>
+  </header>
     <div class="piechart">
       <PieChart v-if="loaded" :chartOptions="chartOptions" :chartData="chartData" />
     </div>
@@ -20,7 +22,7 @@
       },
       chartOptions: {
         responsive: true,
-        backgroundColor: ['#57167E', '#F7B7A3', '#9B3192', '#EA5F89', '#2B0B3F']
+        backgroundColor: ['#C7ADFF', '#DAC7FF', '#AC8BEE', '#916DD5', '#7151A9']
       },
       retrievedData: false,
     }
