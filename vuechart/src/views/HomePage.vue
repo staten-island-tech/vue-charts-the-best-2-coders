@@ -1,6 +1,8 @@
 <template>
     <div>
-
+        <header>
+        
+        </header>
     </div>
 </template>
 
@@ -8,6 +10,9 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
+.stuff {
+    margin-top: 1rem;
+}
 </style>
