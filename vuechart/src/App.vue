@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <header class="title">
     <nav>
-      <h4 class="stuff">Click to see more information on NYPD Complaint History in Different Boroughs!</h4>
+      <h1 class="stuff">Click to see more information on NYPD Complaint History in Different Boroughs!</h1>
       <RouterLink class = "link" to="/pie">Pie Chart</RouterLink>
       <RouterLink class = "link" to="/bar">Bar Graph</RouterLink>
       <RouterLink class = "link" to="/home">Home</RouterLink>
@@ -30,7 +30,7 @@ width: 80%rem;
   font-weight: bold;
   text-decoration: underline;
 }
-h4 {
+h1 {
   font-size: 2rem;
   color: black;
 }
