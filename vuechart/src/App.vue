@@ -36,31 +36,3 @@ h1 {
 }
 
 </style>
-
-<!-- <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import CrimeStatistics from './CrimeStatistics.vue';
-
-Vue.use(VueRouter);
-
-const routes = [
-  { path: '/', component: CrimeStatistics }
-];
-
-const router = new VueRouter({
-  routes
-});
-
-export default {
-  router
-};
-</script>
-
- -->
