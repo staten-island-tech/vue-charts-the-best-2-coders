@@ -1,34 +1,36 @@
 <template>
-  <Bar
-    id="my-chart-id"
-    :options="chartOptions"
-    :data="chartData"
-  />
+  <header>
+    <h1 class="crimes">Crimes Reported in Different Boroughs</h1>
+  </header>
+  <div class="bar">
+    <Bar v-if="loaded" :data="chartData" />
+  </div>
 </template>
 
 <script>
-import BarGraph from '../components/bargraph.vue'
+import { Bar } from 'vue-chartjs'
+import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
+ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
 export default {
-  name: 'BarGraph',
+  name: 'BarChart',
   components: { Bar },
   data() {
     return {
+      loaded: false,
       chartData: {
-        labels: [ 'Manhattan', 'Brooklyn', 'Queens', 'Bronx', 'Staten Island' ],
-        datasets: [ { data: [] } ]
+        labels: ['Manhattan', 'Staten Island', 'Brooklyn', 'Bronx', 'Queens'],
+        datasets: [{ data: [] }]
       },
       chartOptions: {
         responsive: true,
         backgroundColor: ['#C7ADFF', '#DAC7FF', '#AC8BEE', '#916DD5', '#7151A9']
       },
       retrievedData: false,
-      }
     }
-  }
-
-  async mounted(); {
+  },
+  async mounted() {
     try { const res = await fetch('https://data.cityofnewyork.us/resource/qgea-i56i.json?$query=SELECT%20cmplnt_num%2C%20cmplnt_fr_dt%2C%20cmplnt_fr_tm%2C%20cmplnt_to_dt%2C%20cmplnt_to_tm%2C%20addr_pct_cd%2C%20rpt_dt%2C%20ky_cd%2C%20ofns_desc%2C%20pd_cd%2C%20pd_desc%2C%20crm_atpt_cptd_cd%2C%20law_cat_cd%2C%20boro_nm%2C%20loc_of_occur_desc%2C%20prem_typ_desc%2C%20juris_desc%2C%20jurisdiction_code%2C%20parks_nm%2C%20hadevelopt%2C%20housing_psa%2C%20x_coord_cd%2C%20y_coord_cd%2C%20susp_age_group%2C%20susp_race%2C%20susp_sex%2C%20transit_district%2C%20latitude%2C%20longitude%2C%20lat_lon%2C%20patrol_boro%2C%20station_name%2C%20vic_age_group%2C%20vic_race%2C%20vic_sex')
     let data = await res.json()
     const man = data.filter((complaint) => complaint.boro_nm=== 'MANHATTAN')
@@ -47,15 +49,14 @@ export default {
     }
     console.log(this.chartData)
   }
+  }
+</script> 
   
-  
-</script>
-
 <style scoped>
-.crime {
+.crimes {
   font-size: 3rem;
 }
-.piechart {
+.bar {
   height: 700px;
   width: 700px;
   justify-content: center;
