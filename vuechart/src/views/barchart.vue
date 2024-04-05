@@ -3,7 +3,7 @@
     <h1 class="crimes">Crimes Reported in Different Boroughs</h1>
   </header>
   <div class="bar">
-    <Bar v-if="loaded" :data="chartData" />
+    <Bar v-if="loaded" :chartOptions="chartOptions" :data="chartData" />
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
       },
       chartOptions: {
         responsive: true,
-        backgroundColor: ['#C7ADFF', '#DAC7FF', '#AC8BEE', '#916DD5', '#7151A9']
+        backgroundColor: ['#236E96', '#1582D3', '#FFD700', '#F3872F', '#FF598F']
       },
       retrievedData: false,
     }
