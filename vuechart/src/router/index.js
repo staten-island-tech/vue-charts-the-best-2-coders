@@ -9,11 +9,11 @@ const router = createRouter({
       name: 'pie',
       component: () => import('../views/PieChart.vue')
     },
-    // {
-    //   path: '/bar',
-    //   name: 'bar',
-    //   component: () => import('../views/BarChart.vue')
-    // },
+    {
+      path: '/bar',
+      name: 'bar',
+      component: () => import('../views/barchart.vue')
+    },
     {
       path: '/home',
       name: 'home',
