@@ -61,4 +61,4 @@ export default {
   width: 700px;
   justify-content: center;
 }
-</style>
+</style> 
